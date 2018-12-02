@@ -1,0 +1,193 @@
+@{
+string[] members = {"Jani", "Hege", "Kai", "Jim"};
+int i = Array.IndexOf(members, "Kai")+1;
+int len = members.Length;
+string x = members[2-1];
+}
+<html>
+<body>
+<h3>Members</h3>
+@foreach (var person in members)
+{
+<p>@person</p>
+}
+<p>The number of names in Members are @len</p>
+<p>The person at position 2 is @x</p>
+<p>Kai is now in position @i</p>
+
+</body>
+</html>
+.
+
+
+
+
+
+
+
+
+
+
+<html>
+<body>
+@{
+var i = 0;
+while (i < 5)
+    {
+    i += 1;
+    <p>Line @i</p>
+    }
+}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<html>
+<body>
+<!-- Single statement block -->
+@{ var myMessage = "Hello World"; }
+
+<!-- Inline expression or variable -->
+<p>The value of myMessage is: @myMessage</p> 
+
+<!-- Multi-statement block -->
+@{
+var greeting = "Welcome to our site!";
+var weekDay = DateTime.Now.DayOfWeek;
+var greetingMessage = greeting + " Here in Huston it is: " + weekDay;
+}
+
+<p>The greeting is: @greetingMessage</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>ASP can output plain text:</p>
+
+<%response.write("Hello World!")%>
+
+</body>
+</html>
+
+
+
+
+
+
+
+@Code
+Dim price=20
+End Code
+<html>
+<body>
+@if price>30 Then
+    @<p>The price is too high.</p>
+Else    
+    @<p>The price is OK.</p>
+End If
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+@Code
+Dim weekday=DateTime.Now.DayOfWeek
+Dim day=weekday.ToString()
+Dim message=""
+End Code
+<html>
+<body>
+@Select Case day
+Case "Monday"
+    message="This is the first weekday."
+Case "Thursday"
+    message="Only one day before weekend."
+Case "Friday"
+    message="Tomorrow is weekend!"
+Case Else
+    message="Today is " & day
+End Select
+<p>@message</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+@Code
+Dim members as String()={"Jani","Hege","Kai","Jim"}
+i=Array.IndexOf(members,"Kai")+1
+len=members.Length
+x=members(2-1)
+End Code
+<html>
+<body>
+<h3>Members</h3>
+@For Each person In members
+    @<p>@person</p>
+Next person
+<p>The number of names in Members are @len</p>
+<p>The person at position 2 is @x</p>
+<p>Kai is now in position @i</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<body>
+<!-- Single statement block -->
+@{ var myMessage = "Hello World"; }
+
+<!-- Inline expression or variable -->
+<p>The value of myMessage is: @myMessage</p> 
+
+<!-- Multi-statement block -->
+@{
+var greeting = "Welcome to our site!";
+var weekDay = DateTime.Now.DayOfWeek;
+var greetingMessage = greeting + " Here in Huston it is: " + weekDay;
+}
+
+<p>The greeting is: @greetingMessage</p>
+</body>
+</html>
